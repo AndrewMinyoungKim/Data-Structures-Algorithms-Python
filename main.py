@@ -25,3 +25,8 @@ if __name__ == '__main__':
 # del dict['key'] # remove that specific entry
 # dict.clear() # remove all entries
 # del dict # delete entire dictionary
+
+
+# Algorithms:
+# Bellman-Ford
+# Dijkstra's Algorithm
