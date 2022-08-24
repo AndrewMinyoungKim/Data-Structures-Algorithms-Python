@@ -1,0 +1,71 @@
+Time Complexities in big O Notation
+
+Sorting:
+
+Quick:
+Worst Case: O(n^2)
+Average Case: O(nlogn)
+
+Merge:
+Worst case: O(nlogn)
+n items from merge()
+logn from max height of the binary tree created
+
+Heap:
+O(nlogn)
+build-max-heap: O(n)
+heapify: O(logn), called n-1 times
+
+Insertion:
+Worst Case: O(n^2) comparisons and swaps where n is the size of the array
+
+Selection:
+O(n^2)
+
+Bubble:
+Worst Case: O(n^2)
+
+Algorithms:
+
+Binary Search:
+O(logn)
+for the Height of the tree
+
+BFS:
+O(|V| + |E|)
+V = # of vertices
+E = # of edges
+
+DFS:
+O(|V| + |E|)
+V = # of vertices
+E = # of edges
+
+Shortest Path from one node to all nodes
+Dijkstra:
+O(|E| + |V|log|V|)
+if Fibonacci heap is used
+
+Shortest Path from one node to all nodes, negative edges allowed
+Bellman-Ford:
+O(|V| * |E|)
+
+Shortest Path between all pairs of vertices, negative edges allowed
+Floyd-Warshall:
+O(V^3)
+
+Getting minimum spanning tree (MST)--
+minimum weight connected graph with no cycles
+
+Kruskal:
+O(E(logE))
+
+Prim:
+Adjacency Matrix, Searching: O(V^2)
+Binary Heap, Adjacency List: O(V(logV) + E(logV))
+
+Finding max flow--
+Ford-Fulkerson:
+O(Ef)
+E = # of edges
+f = maximum flow
