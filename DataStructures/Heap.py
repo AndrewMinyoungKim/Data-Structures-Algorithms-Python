@@ -1,79 +1,79 @@
-# Python code to demonstrate working of
-# heapify(), heappush() and heappop()
+def max_heapify(a, heap_size, i):
+    l = 2*i
+    r = 2*i + 1
 
-# importing "heapq" to implement heap queue
-import heapq
+    largest = i
 
-# initializing list
-li = [5, 7, 9, 1, 3]
+    if l < heap_size and a[l] > a[i]:
+        largest = l
 
-# using heapify to convert list into heap
-heapq.heapify(li)
+    if r < heap_size and a[r] > a[largest]:
+        largest = r
 
-# printing created heap
-print ("The created heap is : ",end="")
-print (list(li))
-
-# using heappush() to push elements into heap
-# pushes 4
-heapq.heappush(li,4)
-
-# printing modified heap
-print ("The modified heap after push is : ",end="")
-print (list(li))
-
-# using heappop() to pop smallest element
-print ("The popped and smallest element is : ",end="")
-print (heapq.heappop(li))
+    if largest != i:
+        # swap elements
+        a[i], a[largest] = a[largest], a[i]
+        max_heapify(a, heap_size, largest)
 
 
+def build_max_heap(a):
+    heap_size = len(a)
 
-# Python code to demonstrate working of
-# heappushpop() and heapreplce()
-
-# importing "heapq" to implement heap queue
-import heapq
-
-# initializing list 1
-li1 = [5, 1, 9, 4, 3]
-
-# initializing list 2
-li2 = [5, 7, 9, 4, 3]
-
-# using heapify() to convert list into heap
-heapq.heapify(li1)
-heapq.heapify(li2)
-
-# using heappushpop() to push and pop items simultaneously
-# pops 2
-print ("The popped item using heappushpop() is : ",end="")
-print (heapq.heappushpop(li1, 2))
-
-# using heapreplace() to push and pop items simultaneously
-# pops 3
-print ("The popped item using heapreplace() is : ",end="")
-print (heapq.heapreplace(li2, 2))
+    for i in range(heap_size//2, 0, -1):
+        max_heapify(a, heap_size, i)
 
 
+a = [None, 0, 5, 20, 6, 12, 65, 1, 4, 9, 3, 89, 22, 25, 28, 10]
+build_max_heap(a)
+print(f'Heap: {a[1:]}')
 
-# Python code to demonstrate working of
-# nlargest() and nsmallest()
+# def left(i):
+#     return 2*i
 
-# importing "heapq" to implement heap queue
-import heapq
 
-# initializing list
-li1 = [6, 7, 9, 4, 3, 5, 8, 10, 1]
+# def right(i):
+#     return 2*i + 1
 
-# using heapify() to convert list into heap
-heapq.heapify(li1)
 
-# using nlargest to print 3 largest numbers
-# prints 10, 9 and 8
-print("The 3 largest numbers in list are : ",end="")
-print(heapq.nlargest(3, li1))
+# def parent(i):
+#     return i//2
 
-# using nsmallest to print 3 smallest numbers
-# prints 1, 3 and 4
-print("The 3 smallest numbers in list are : ",end="")
-print(heapq.nsmallest(3, li1))
+
+# def max_heapify(a, heap_size, i):
+#     l = left(i)
+#     r = right(i)
+
+#     largest = i
+
+#     if l < heap_size and a[l] > a[i]:
+#         largest = l
+
+#     if r < heap_size and a[r] > a[largest]:
+#         largest = r
+
+#     if largest != i:
+#         # swap elements
+#         a[i], a[largest] = a[largest], a[i]
+#         max_heapify(a, heap_size, largest)
+
+
+# def build_max_heap(a):
+#     heap_size = len(a)
+
+#     for i in range(heap_size//2, 0, -1):
+#         max_heapify(a, heap_size, i)
+
+
+# def main():
+#     # root is at index 1
+#     # it can be at index zero but see here: https://www.quora.com/Why-do-indexes-for-heaps-start-at-1
+#     # and: https://stackoverflow.com/questions/22900388/why-in-a-heap-implemented-by-array-the-index-0-is-left-unused
+
+#     a = [None, 0, 5, 20, 6, 12, 65, 1, 4, 9, 3, 89, 22, 25, 28, 10]
+#     build_max_heap(a)
+
+#     # print heap starting with the root at index 1
+#     print(f'Heap: {a[1:]}')
+
+
+# main()
