@@ -1,3 +1,8 @@
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        return 1
+
+
 def bubble_sort(list):
     n = len(list)
 

@@ -1,18 +1,10 @@
-def left(i):
-    return 2*i
-
-
-def right(i):
-    return 2*i + 1
-
-
 def parent(i):
     return i//2
 
 
 def max_heapify(a, heap_size, i):
-    l = left(i)
-    r = right(i)
+    l = 2*i  # left
+    r = 2*i + 1  # right
 
     largest = i
 

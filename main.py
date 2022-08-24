@@ -1,11 +1,10 @@
 class Main:
     def run(self):
         self.done = False
-        self.clock = pygame.time.Clock()
-        self.game = Game(self.window)
 
         while not self.done:
             self.done = True
+
 
 if __name__ == '__main__':
     play = Main()
