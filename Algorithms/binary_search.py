@@ -1,6 +1,5 @@
 import math
 
-
 def binarySearch(array, target):
     if not len(array):
         return -1
@@ -9,8 +8,6 @@ def binarySearch(array, target):
     right = len(array)
 
     while (left + 1 < right):
-        # The video has two forward slashes which is floor division.
-        # It only needs one, as I'm rounding up with ceil after division occurs.
         mid = math.ceil((right + left) / 2)
 
         if array[mid] == target:
@@ -24,7 +21,6 @@ def binarySearch(array, target):
         return left
 
     return -1
-
 
 def main():
     array = [1, 4, 5, 7, 9, 12, 15, 18, 19,

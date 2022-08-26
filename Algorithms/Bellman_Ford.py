@@ -68,6 +68,3 @@ if __name__ == '__main__':
 
     # function call
     g.BellmanFord(0)
-
-# Initially, Contributed by Neelam Yadav
-# Later On, Edited by Himanshu Garg
