@@ -1,0 +1,11 @@
+Binary Search
+BFS/DFS
+Sliding Window
+Two Pointers
+Prim/Kruskal
+Flood Fill
+Kadane
+Dijkstra
+Bellman Ford
+Floyd Warshall
+Backtracking
