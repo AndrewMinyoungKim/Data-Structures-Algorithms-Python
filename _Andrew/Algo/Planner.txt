@@ -2,8 +2,8 @@ Binary Search
 BFS/DFS
 Sliding Window
 Two Pointers
-Prim/Kruskal
 Flood Fill
+Prim/Kruskal
 Kadane
 Dijkstra
 Bellman Ford
