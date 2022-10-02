@@ -35,3 +35,5 @@ def main():
 
 
 main()
+
+# print('G','G','G', sep='-', end='+')
